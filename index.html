@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique - Lumitoria</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" href="images/Lumicraft-Logo.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:src" content="https://i.ibb.co/3StMrJW/Design-sans-titre.png">
+    <meta property="og:image" content="https://i.ibb.co/3StMrJW/Design-sans-titre.png">
+    <meta name="twitter:title" content="Boutique - Lumitoria">
+    <meta name="description" content="Vivez l'aventure, créez votre légende !">
+</head>
+<body>
+  <header>
+    <h1>Boutique Lumitoria</h1>
+    <p><b>En développement - Version BETA</b></p>
+  </header>
+
+  <section class="boutique-section">
+    <h2 class="boutique-title">Passes Lumi</h2>
+    <div class="grades-container">
+      <div class="grade-card">
+        <img src="images/lumi-pro-rsz.png" alt="Lumi Pro" class="card-image">
+        <div class="grade-card-content">
+          <h3 class="grade-title pro">Lumi Pro</h3>
+          <p><b>2,50€ / an</b></p>
+          <p class="grade-advantages"><b>Avantages :</b><br>Non déterminée</p>
+          <button class="btn" onclick="openPopup('lumi-pro')">Acheter</button>
+        </div>
+      </div>
+      <div class="grade-card">
+        <img src="images/Lumi-Premium-rsz.png" alt="Lumi Premium" class="card-image">
+        <div class="grade-card-content">
+          <h3 class="grade-title premium">Lumi Premium</h3>
+          <p><b>5€ / an</b></p>
+          <p class="grade-advantages"><b>Avantages :</b><br>Non déterminée</p>
+          <button class="btn" onclick="openPopup('lumi-premium')">Acheter</button>
+        </div>
+      </div>
+      <div class="grade-card">
+        <img src="images/Lumi-Ultra-rsz.png" alt="Lumi ULTRA" class="card-image">
+        <div class="grade-card-content">
+          <h3 class="grade-title ultra">Lumi ULTRA</h3>
+          <p><b>10€ / an</b></p>
+          <p class="grade-advantages"><b>Avantages :</b><br>Non déterminée</p>
+          <button class="btn" onclick="openPopup('lumi-ultra')">Acheter</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="boutique-title">Passes VIP</h2>
+    <div class="grades-container">
+      <div class="grade-card">
+        <img src="https://s13.gifyu.com/images/SJIMT.gif" alt="VIP" class="card-image">
+        <div class="grade-card-content">
+          <h3 class="grade-title bronze">VIP</h3>
+          <p><b>5€</b> ( <b>PAIEMENT UNIQUE</b> )</p>
+          <p class="grade-advantages"><b>Avantages :</b><br>Non déterminée</p>
+          <button class="btn" onclick="openPopup('vip')">Acheter</button>
+        </div>
+      </div>
+      <div class="grade-card">
+        <img src="https://s7.gifyu.com/images/SJIM9.gif" alt="VIP+" class="card-image">
+        <div class="grade-card-content">
+          <h3 class="grade-title argent">VIP+</h3>
+          <p><b>10€</b> ( <b>PAIEMENT UNIQUE</b> )</p>
+          <p class="grade-advantages"><b>Avantages :</b><br>Non déterminée.</p>
+          <button class="btn" onclick="openPopup('vip-plus')">Acheter</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="boutique-title">Kits de la semaine</h2>
+    <div class="grades-container">
+      <div class="grade-card">
+        <img src="images/pack-noel-rsz.png" alt="Kit 1" class="card-image">
+        <div class="grade-card-content">
+          <h3 class="grade-title">Étoile de Noël<br></h3>
+          <p><b>6€</b></p>
+          <p class="grade-advantages"><b>Contenu :</b><br>Non déterminée.</p>
+          <button class="btn" onclick="openPopup('kit1')">Acheter</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="timer">
+      <p>Nouveaux kits dans : <b><span id="countdown"></span></b></p>
+    </div>
+
+    <h2 class="boutique-title">Coffres renforcée et clés</h2>
+    <p><b>IMPORTANT : Les clés et les coffres renforcée peuvent apparaître aléatoirement sur la carte</b></p>
+    <div class="grades-container">
+      <div class="grade-card">
+        <img src="images/key.png" alt="key" class="card-image">
+        <div class="grade-card-content">
+          <h3 class="grade-title">Clé</h3>
+          <p><b>2€</b></p>
+          <p class="grade-advantages">Obtenez une clé permettant d'ouvrir un cofre renforcée</p>
+          <button class="btn" onclick="openPopup('key')">Acheter</button>
+        </div>
+      </div>
+      <div class="grade-card">
+        <img src="images/vault.png" alt="vault" class="card-image">
+        <div class="grade-card-content">
+          <h3 class="grade-title">Coffre renforcée</h3>
+          <p><b>4€</b></p>
+          <p class="grade-advantages">Obtenez un coffre renforcée est ouvrez le avec une clé pour découvrir ce qu'elle contient</p>
+          <button class="btn" onclick="openPopup('vault')">Acheter</button>
+        </div>
+      </div>
+      <div class="grade-card">
+        <img src="images/vaultandkey.png" alt="key-vault" class="card-image">
+        <div class="grade-card-content">
+          <h3 class="grade-title">Clé + Coffre renforcée</h3>
+          <p><b>5€</b> <b>PROMOTION</b></p>
+          <p class="grade-advantages">Obtenez une clé est un coffre renforcée est découvrez ce qu'elle contient</p>
+          <button class="btn" onclick="openPopup('key-vault')">Acheter</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pop-ups -->
+  <div id="popups">
+    <div class="popup" id="lumi-pro">
+      <div class="popup-content">
+        <div class="popup-header">
+          <h3>Lumi Pro</h3>
+          <button class="btn-close" onclick="closePopup('lumi-pro')">×</button>
+        </div>
+        <p><b>Avant d'effectuer le paiement,<br>veuillez lire les conditions ci-dessous :</b><br>
+          <br>- Être dans le serveur Discord<br>- Compte Minecraft lié avec votre compte Discord<br>- Aucun remboursement possible<br>- Être en accord avec nos conditions d'utilisation</p>
+        <a href="" class="btn">Acheter</a>
+      </div>
+    </div>
+    <div class="popup" id="lumi-premium">
+      <div class="popup-content">
+        <div class="popup-header">
+          <h3>Lumi Premium</h3>
+          <button class="btn-close" onclick="closePopup('lumi-premium')">×</button>
+        </div>
+        <p><b>Avant d'effectuer le paiement,<br>veuillez lire les conditions ci-dessous :</b><br>
+          <br>- Être dans le serveur Discord<br>- Compte Minecraft lié avec votre compte Discord<br>- Aucun remboursement possible<br>- Être en accord avec nos conditions d'utilisation</p>
+        <a href="" class="btn">Acheter</a>
+      </div>
+    </div>
+    <div class="popup" id="lumi-ultra">
+      <div class="popup-content">
+        <div class="popup-header">
+          <h3>Lumi ULTRA</h3>
+          <button class="btn-close" onclick="closePopup('lumi-ultra')">×</button>
+        </div>
+        <p><b>Avant d'effectuer le paiement,<br>veuillez lire les conditions ci-dessous :</b><br>
+          <br>- Être dans le serveur Discord<br>- Compte Minecraft lié avec votre compte Discord<br>- Aucun remboursement possible<br>- Être en accord avec nos conditions d'utilisation</p>
+        <a href="" class="btn">Acheter</a>
+      </div>
+    </div>
+    <div class="popup" id="vip">
+      <div class="popup-content">
+        <div class="popup-header">
+          <h3>VIP</h3>
+          <button class="btn-close" onclick="closePopup('vip')">×</button>
+        </div>
+        <p><b>Avant d'effectuer le paiement,<br>veuillez lire les conditions ci-dessous :</b><br>
+          <br>- Être dans le serveur Discord<br>- Compte Minecraft lié avec votre compte Discord<br>- Aucun remboursement possible<br>- Être en accord avec nos conditions d'utilisation</p>
+        <a href="" class="btn">Acheter</a>
+      </div>
+    </div>
+    <div class="popup" id="vip-plus">
+      <div class="popup-content">
+        <div class="popup-header">
+          <h3>VIP+</h3>
+          <button class="btn-close" onclick="closePopup('vip-plus')">×</button>
+        </div>
+        <p><b>Avant d'effectuer le paiement,<br>veuillez lire les conditions ci-dessous :</b><br>
+          <br>- Être dans le serveur Discord<br>- Compte Minecraft lié avec votre compte Discord<br>- Aucun remboursement possible<br>- Être en accord avec nos conditions d'utilisation</p>
+        <a href="" class="btn">Acheter</a>
+      </div>
+    </div>
+    <div class="popup" id="kit1">
+      <div class="popup-content">
+        <div class="popup-header">
+          <h3>Étoile de Noël</h3>
+          <button class="btn-close" onclick="closePopup('kit1')">×</button>
+        </div>
+        <p><b>Avant d'effectuer le paiement,<br>veuillez lire les conditions ci-dessous :</b><br>
+          <br>- Être dans le serveur Discord<br>- Compte Minecraft lié avec votre compte Discord<br>- Aucun remboursement possible<br>- Être en accord avec nos conditions d'utilisation</p>
+        <a href="" class="btn">Acheter</a>
+      </div>
+    </div>
+  </div>
+  <div class="popup" id="key">
+    <div class="popup-content">
+      <div class="popup-header">
+        <h3>Clé</h3>
+        <button class="btn-close" onclick="closePopup('key')">×</button>
+      </div>
+      <p><b>Avant d'effectuer le paiement,<br>veuillez lire les conditions ci-dessous :</b><br>
+        <br>- Être dans le serveur Discord<br>- Compte Minecraft lié avec votre compte Discord<br>- Aucun remboursement possible<br>- Être en accord avec nos conditions d'utilisation</p>
+      <a href="" class="btn">Acheter</a>
+    </div>
+  </div>
+</div>
+<div class="popup" id="vault">
+  <div class="popup-content">
+    <div class="popup-header">
+      <h3>Coffre renforcée</h3>
+      <button class="btn-close" onclick="closePopup('vault')">×</button>
+    </div>
+    <p><b>Avant d'effectuer le paiement,<br>veuillez lire les conditions ci-dessous :</b><br>
+      <br>- Être dans le serveur Discord<br>- Compte Minecraft lié avec votre compte Discord<br>- Aucun remboursement possible<br>- Être en accord avec nos conditions d'utilisation</p>
+    <a href="" class="btn">Acheter</a>
+  </div>
+</div>
+</div>
+<div class="popup" id="key-vault">
+  <div class="popup-content">
+    <div class="popup-header">
+      <h3>Clé + coffre renforcée</h3>
+      <button class="btn-close" onclick="closePopup('key-vault')">×</button>
+    </div>
+    <p><b>Avant d'effectuer le paiement,<br>veuillez lire les conditions ci-dessous :</b><br>
+    <br>- Être dans le serveur Discord<br>- Compte Minecraft lié avec votre compte Discord<br>- Aucun remboursement possible<br>- Être en accord avec nos conditions d'utilisation</p>
+    <a href="" class="btn">Acheter</a>
+  </div>
+</div>
+</div>
+  <script src="scripts.js"></script>
+
+</body>
+</html>
